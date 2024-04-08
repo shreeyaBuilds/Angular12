@@ -1,3 +1,5 @@
+This project is a Food-Ordering-App which involves learnings of various Angular 12 concepts.
+
 # Pargrahi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
