@@ -1,0 +1,69 @@
+<form *ngIf="mode =='editMode'" class="row g-3 form-container viewContent" [formGroup]="viewupdateprofileform"  #myForm="ngForm">
+        <div class="col-md-12">
+            <label for="fname"><b>First Name</b></label>
+            <input type="text" class="form-control" id="fname" placeholder="First Name" formControlName="fname"
+                [ngClass]="{ 'is-invalid': (submitButtonClicked || viewupdateprofileform.controls.fname.touched) && viewupdateprofileform.controls.fname.errors}">
+            <div *ngIf="(submitButtonClicked || viewupdateprofileform.controls.fname.touched) && viewupdateprofileform.controls.fname.errors"
+                class="invalid-feedback">
+                <div *ngIf="viewupdateprofileform.controls.fname.errors.required">First Name is required
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" class="form-control" id="lname" placeholder="Last Name" formControlName="lname"
+                [ngClass]="{ 'is-invalid': (submitButtonClicked || viewupdateprofileform.controls.lname .touched) && viewupdateprofileform.controls.lname.errors}">
+            <div *ngIf="(submitButtonClicked || viewupdateprofileform.controls.lname.touched) && viewupdateprofileform.controls.lname.errors"
+                class="invalid-feedback">
+                <div *ngIf="viewupdateprofileform.controls.lname.errors.required">Last Name is required
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <label for="email"><b>Email Address</b></label>
+            <input type="email" class="form-control" id="email" placeholder="Username (email-id)"
+                formControlName="email"
+                [ngClass]="{ 'is-invalid': (submitButtonClicked || viewupdateprofileform.controls.email.touched) && viewupdateprofileform.controls.email.errors}">
+            <div *ngIf="(submitButtonClicked || viewupdateprofileform.controls.email.touched) && viewupdateprofileform.controls.email.errors"
+                class="invalid-feedback">
+                <div *ngIf="viewupdateprofileform.controls.email.errors.required">Username is required</div>
+                <div *ngIf="viewupdateprofileform.controls.email.errors.email">Enter a valid username address, e.g.,
+                    john@example.com</div>
+            </div>
+        </div>
+        <br>
+        
+        <div class="col-md-12">
+            <label for="password"><b>Password</b></label>
+            <input type="password" class="form-control" id="inputpassword" placeholder="Password"
+                formControlName="password"
+                [ngClass]="{ 'is-invalid': (submitButtonClicked || viewupdateprofileform.controls.password.touched) && viewupdateprofileform.controls.password.errors}">
+            <div *ngIf="(submitButtonClicked || viewupdateprofileform.controls.password.touched) && viewupdateprofileform.controls.password.errors"
+                class="invalid-feedback">
+                <div *ngIf="viewupdateprofileform.controls.password.errors.required">password is required</div>
+                <div *ngIf="viewupdateprofileform.controls.password.errors.minlength"> password must be at least 6 characters.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            <button class="pushable col-12 save-changes" [disabled]="viewupdateprofileform.invalid"  (click)="updateProfile()">
+                    <span>
+                    Submit
+                </span>
+            </button>
+        </div>
+    </form>
+
+    <div *ngIf="mode == 'viewMode'" class="viewContent">
+        <div><b>First Name</b></div>
+        <div>{{userFirstName}}</div>
+        <br>
+        <div><b>Last Name</b></div>
+        <div>{{userLastName}}</div>
+        <br>
+        <div><b>Email</b></div>
+        <div>{{userEmail}}</div>
+    </div>

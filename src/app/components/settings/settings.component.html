@@ -1,0 +1,48 @@
+<div class="sidenav">
+  <div class="d-flex">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" (navChange)="onNavChange($event)" class="nav-pills"
+      orientation="vertical">
+      <li><img src="assets/images/img_avatar.png" alt="Avatar" class="avatar">
+        <p *ngIf="currentUser" class="fullName">{{fullName}}</p>
+      </li>
+      <li ngbNavItem="profile">
+        <a class="navlinksContent" routerLink='/settings/profile' ngbNavLink>Profile</a>
+      </li>
+      <li ngbNavItem="address">
+        <a class="address" routerLink='/settings/address' ngbNavLink>Address</a>
+      </li>
+      <li ngbNavItem="paymentDetails">
+        <a class="navlinksContent" routerLink='/settings/payment' ngbNavLink>Payment Details</a>
+      </li>
+      <li ngbNavItem="homePage">
+        <a class="GoBackToHome" routerLink='/home' ngbNavLink>Go To Home Page</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" (navChange)="onNavChange($event)" class="nav-tabs">
+      <li [ngbNavItem]="'profile'">
+        <a class="commonToNav" routerLink='/settings/profile' ngbNavLink>View/Update Profile</a>
+      </li>
+      <li [ngbNavItem]="'address'">
+        <a class='commonToAddress' routerLink='/settings/address' ngbNavLink>Add/Update Address</a>
+      </li>
+      <li [ngbNavItem]="'paymentDetails'">
+        <a class="commonToNav" routerLink='/settings/payment' ngbNavLink>Add/Update Payment Details</a>
+
+      </li>
+      <li style="margin-left: .25%;">
+
+        <button [ngClass]="{'viewMode': mode == 'viewMode','editMode': mode =='editMode'}" data-toggle="tooltip"
+          data-placement="top" title={{modeTitle}} (click)="changeToEditMode()">
+          <i class="bi bi-pen"></i></button>
+
+      </li>
+    </ul>
+    <div>
+      <router-outlet [ngbNavOutlet]="nav" class="mt-2"> </router-outlet>
+    </div>
+  </div>
+</div>

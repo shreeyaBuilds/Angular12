@@ -1,0 +1,546 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Harry",
+      "lname": "Joans",
+      "email": "harry@gmail.com",
+      "phone": 8712903745,
+      "password": "harry12",
+      "address": [
+        {}
+      ],
+      "payment": [
+        {}
+      ]
+    },
+    {
+      "id": 2,
+      "fname": "Lara",
+      "lname": "jean",
+      "email": "lara@yahoo.com",
+      "phone": 9123456708,
+      "password": "lara098",
+      "address": [
+        {}
+      ],
+      "payment": [
+        {}
+      ]
+    },
+    {
+      "id": 3,
+      "fname": "Balla",
+      "lname": "Swan",
+      "phone": 7639082367,
+      "email": "bella@gmail.com",
+      "password": "323bella",
+      "address": [
+        {}
+      ],
+      "payment": [
+        {}
+      ]
+    },
+    {
+      "id": 4,
+      "fname": "Edward",
+      "lname": "cullen",
+      "phone": 1234567889,
+      "email": "edward@gmail.com",
+      "password": "edward123",
+      "address": [
+        {}
+      ],
+      "payment": [
+        {}
+      ]
+    },
+    {
+      "id": 12,
+      "fname": "Harry",
+      "lname": "Joans",
+      "email": "harry@gmail.com",
+      "phone": 8712903745,
+      "password": "harry12",
+      "address": [
+        {}
+      ],
+      "payment": [
+        {}
+      ]
+    },
+    {
+      "fname": "shreeya",
+      "lname": "srivastava",
+      "email": "shreeyag29ww@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 13,
+      "address": [
+        {
+          "houseNo": "A102",
+          "city": "Delhi",
+          "state": "Delhi",
+          "landmark": "DC"
+        }
+      ],
+      "payment": [
+        {},
+        {
+          "name": "Shreeya Srivastava",
+          "creditCard": "123456789000",
+          "year": "2039",
+          "month": "SEPTEMBER",
+          "cvv": "234"
+        }
+      ]
+    },
+    {
+      "fname": "shreeya",
+      "lname": "srivastava",
+      "email": "shrugg.29@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 14
+    },
+    {
+      "fname": "Shreeya",
+      "lname": "Srivastava",
+      "email": "kanishka29@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 15
+    },
+    {
+      "fname": "Kavish",
+      "lname": "Agrawal",
+      "email": "kavishag@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 16
+    },
+    {
+      "fname": "kareem",
+      "lname": "Faridi",
+      "email": "kareemfaridi@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 17
+    },
+    {
+      "fname": "kareena",
+      "lname": "Kapoor",
+      "email": "kareenkapoor@gmail.com",
+      "password": "P*ssw0rd54321",
+      "id": 18
+    },
+    {
+      "fname": "shreeya",
+      "lname": "srivastava",
+      "email": "shreeyag29@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 19,
+      "address": [
+        {
+          "houseNo": "A104",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "landmark": "TATA MOTORS"
+        }
+      ],
+      "payment": [
+        {
+          "name": "Shreeya Srivastava",
+          "creditCardNumber": "111111111111",
+          "year": "2037",
+          "month": "SEPTEMBER",
+          "cvv": "876"
+        }
+      ]
+    },
+    {
+      "fname": "Shreeya",
+      "lname": "Srivastava",
+      "email": "shrutiagrwal@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 20
+    },
+    {
+      "fname": "shru",
+      "lname": "mishra",
+      "email": "shrumish@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 21
+    },
+    {
+      "fname": "Shavya",
+      "lname": "Goel",
+      "email": "shavyagoel@gmail.com",
+      "password": "P*ssw0rd7890",
+      "id": 22
+    },
+    {
+      "fname": "shruti",
+      "lname": "sharma",
+      "email": "shrutipath29@gmail.com",
+      "password": "P*ssw0rd67890",
+      "id": 23,
+      "address": [
+        {
+          "houseNo": "A102",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "landmark": "dert cmpof"
+        }
+      ],
+      "payment": [
+      
+        {
+          "name": "Shruti sharmma",
+          "creditCardNumber": "111111111111",
+          "year": "2026",
+          "month": "AUGUST",
+          "cvv": "123"
+        }
+      ]
+    }
+  ],
+  "foodList": [
+    {
+      "id": 1,
+      "restaurant": "reddys biriyani zone",
+      "dishName": "roasted chicken biriyani",
+      "description": "Indian Restaurant",
+      "rating": 4,
+      "cost": 190,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 2,
+      "restaurant": "kabablo",
+      "dishName": "Cajun spiced chicken",
+      "description": "Indian Restaurant",
+      "rating": 4.1,
+      "cost": 230,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 3,
+      "restaurant": "main land china",
+      "dishName": "Veg Momos",
+      "description": "Chineese Restaurant",
+      "rating": 3.9,
+      "cost": 250,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 4,
+      "restaurant": "beijing bites",
+      "dishName": "cripy fried chicken momos",
+      "description": "Chineese Restaurant",
+      "rating": 4.2,
+      "cost": 180,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 5,
+      "restaurant": "mcdonald's",
+      "dishName": "American cheese burger",
+      "description": "American Restaurant",
+      "rating": 3.9,
+      "cost": 260,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 6,
+      "restaurant": "KFC",
+      "dishName": "KFC chicken bucket",
+      "description": "American Restaurant",
+      "rating": 4.1,
+      "cost": 599,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 7,
+      "restaurant": "home kitchen services",
+      "dishName": "mix non veg noodles",
+      "description": "Chineese Restaurant",
+      "rating": 3.9,
+      "cost": 100,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 8,
+      "restaurant": "hotel shalimar",
+      "dishName": "chicken fried rice",
+      "description": "chineese Restaurant",
+      "rating": 4.4,
+      "cost": 190,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 9,
+      "restaurant": "al arabia",
+      "dishName": "Chicken shawarma",
+      "description": "Lebaneese style Restaurant",
+      "rating": 4.2,
+      "cost": 120,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 10,
+      "restaurant": "al bek",
+      "dishName": "Alfaham Chicken",
+      "description": "Lebaneese style Restaurant",
+      "rating": 4.1,
+      "cost": 230,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 8,
+      "restaurant": "hotel shalimar",
+      "dishName": "chicken fried rice",
+      "description": "chineese Restaurant",
+      "rating": 4.4,
+      "cost": 190,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 9,
+      "restaurant": "al arabia",
+      "dishName": "Chicken shawarma",
+      "description": "Lebaneese style Restaurant",
+      "rating": 4.2,
+      "cost": 120,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "id": 10,
+      "restaurant": "al bek",
+      "dishName": "Alfaham Chicken",
+      "description": "Lebaneese style Restaurant",
+      "rating": 4.1,
+      "cost": 230,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff"
+    },
+    {
+      "feedId": 14,
+      "restaurant": "reddys biriyani zone",
+      "dishName": "roasted chicken biriyani",
+      "description": "Indian Restaurant",
+      "rating": 4,
+      "cost": 190,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff",
+      "id": 11
+    },
+    {
+      "feedId": 14,
+      "restaurant": "reddys biriyani zone",
+      "dishName": "roasted chicken biriyani",
+      "description": "Indian Restaurant",
+      "rating": 4,
+      "cost": 190,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff",
+      "id": 12
+    },
+    {
+      "feedId": 16,
+      "restaurant": "reddys biriyani zone",
+      "dishName": "roasted chicken biriyani",
+      "description": "Indian Restaurant",
+      "rating": 4,
+      "cost": 190,
+      "unique": 0.5204481863089581,
+      "imageUrl": "http://dummyimage.com/128x100.png/ff4444/ffffff",
+      "id": 13
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userid": 1,
+      "feedId": 16,
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "orderDate": "2022-05-07T19:55:12.097Z",
+      "orderTime": 1651953312097
+    },
+    {
+      "userId": 19,
+      "feedId": "726e4894-b0a7-4b5b-a430-178c53306c29",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-07T19:55:12.097Z",
+      "orderTime": 1651953312097,
+      "id": 2
+    },
+    {
+      "userId": 19,
+      "feedId": "a94bca65-1d90-40d6-9e12-f099910c3c99",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 695,
+      "orderDate": "2022-05-07T19:57:00.474Z",
+      "orderTime": 1651953420474,
+      "id": 3
+    },
+    {
+      "userId": 19,
+      "feedId": "3b50095c-ff6d-4c1d-be1d-99976ba27b8b",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 945,
+      "orderDate": "2022-05-07T19:58:58.850Z",
+      "orderTime": 1651953538850,
+      "id": 4
+    },
+    {
+      "userId": 19,
+      "feedId": "1c679f7f-333a-4800-87ea-f759f74edcc6",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 945,
+      "orderDate": "2022-05-07T20:12:36.107Z",
+      "orderTime": 1651954356107,
+      "id": 5
+    },
+    {
+      "userId": 19,
+      "feedId": "93df3ae8-3fb5-41b8-8987-b661861b15a2",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 945,
+      "orderDate": "2022-05-07T20:14:54.723Z",
+      "orderTime": 1651954494723,
+      "id": 6
+    },
+    {
+      "userId": 19,
+      "feedId": "99b9e026-72ab-459d-a3da-10ff303e5f92",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 945,
+      "orderDate": "2022-05-07T20:23:17.008Z",
+      "orderTime": 1651954997008,
+      "id": 7
+    },
+    {
+      "userId": 19,
+      "feedId": "02093e58-aedd-457f-b4f8-9449b393941f",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 945,
+      "orderDate": "2022-05-07T20:25:00.819Z",
+      "orderTime": 1651955100819,
+      "id": 8
+    },
+    {
+      "userId": 19,
+      "feedId": "27be815c-10c6-4bd0-acf6-0192f0e27db5",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 695,
+      "orderDate": "2022-05-07T20:34:10.419Z",
+      "orderTime": 1651955650419,
+      "id": 9
+    },
+    {
+      "userId": 19,
+      "feedId": "eaaaf89e-34d7-4704-a55f-ca660f7ab006",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-07T20:51:33.803Z",
+      "orderTime": 1651956693803,
+      "id": 10
+    },
+    {
+      "userId": 19,
+      "feedId": "56e83132-d88f-4903-b330-cbf15525927e",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 695,
+      "orderDate": "2022-05-07T20:54:13.019Z",
+      "orderTime": 1651956853019,
+      "id": 11
+    },
+    {
+      "userId": 19,
+      "feedId": "d7ef3278-67f6-40f2-b795-ab284ada3412",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-07T20:57:59.858Z",
+      "orderTime": 1651957079858,
+      "id": 12
+    },
+    {
+      "userId": 19,
+      "feedId": "54d89acb-35fa-4993-83cc-fc44694dc276",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-07T21:00:14.891Z",
+      "orderTime": 1651957214891,
+      "id": 13
+    },
+    {
+      "userId": 19,
+      "feedId": "b993fc5b-8cd1-48ea-8cc7-598bc18864a7",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-07T22:41:35.994Z",
+      "orderTime": 1651963295994,
+      "id": 14
+    },
+    {
+      "userId": 19,
+      "feedId": "f73d63fc-bb9e-41bb-9fab-9a15b363048b",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-07T22:45:36.325Z",
+      "orderTime": 1651963536325,
+      "id": 15
+    },
+    {
+      "userId": 23,
+      "feedId": "d7bc896f-1af6-4db1-ab0e-55f15adbf75b",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-08T03:34:03.133Z",
+      "orderTime": 1651980843133,
+      "id": 16
+    },
+    {
+      "userId": 23,
+      "feedId": "2e8fc4bb-94f9-44d5-836e-a25a31e2bb1f",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-08T03:40:44.644Z",
+      "orderTime": 1651981244644,
+      "id": 17
+    },
+    {
+      "userId": 23,
+      "feedId": "d8dea6d6-2ee6-4f2d-b5d7-327839d5db8f",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 265,
+      "orderDate": "2022-05-08T04:21:26.629Z",
+      "orderTime": 1651983686629,
+      "id": 18
+    },
+    {
+      "userId": 19,
+      "feedId": "b570ebc1-459b-47fa-a5a7-5a7316298aa8",
+      "orderstatus": "placed",
+      "paymentStatus": "paid",
+      "totalAmount": 675,
+      "orderDate": "2022-05-08T05:53:58.344Z",
+      "orderTime": 1651989238344,
+      "id": 19
+    }
+  ],
+  "cart": []
+}

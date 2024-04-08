@@ -1,0 +1,33 @@
+<div style="margin-bottom: 2%; height:14%">
+    <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+        <div class="navbar-nav ">
+            
+            <a class="nav-item nav-link" routerLink="/home">Foody</a>
+            <a class="nav-item nav-link" (click)="logout()" style="cursor:pointer">Logout</a>
+            <!-- //make icons as button and remove bigger height and width and modify styling of button -->
+            <div  class="nav-item nav-link icons">
+            <a href="/cart"><i class="bi bi-cart"style="margin-left: -44%;"></i></a>
+            <a href="/settings/profile"><i class=" bi bi-gear"></i></a>
+            <a (click)="getOrders()"><i class="bi bi-geo-alt-fill" style="margin-left: 63%;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="!currentUser">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" routerLink="/home">Foody</a>
+        </div>
+    </nav>
+</div>
+
+<!-- //ngclass -->
+<div class="flex backimg" style="height: 75%;">
+    <!-- <div style="width:99%">  -->
+        <div>
+        <app-alert></app-alert>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<footer style="width:100%" *ngIf="currentUser">
+<app-footer></app-footer>
+</footer>

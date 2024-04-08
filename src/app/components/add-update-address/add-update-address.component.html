@@ -1,0 +1,70 @@
+<form *ngIf="mode =='editMode'" class="row g-3 form-container viewContent" [formGroup]="addOrUpdateAddressForm"
+    #myForm="ngForm">
+    <div class="col-md-12">
+        <label for="houseNo"><b>House No</b></label>
+        <input type="text" class="form-control" id="houseNo" placeholder="House no" formControlName="houseNo"
+            [ngClass]="{ 'is-invadivd': (submitButtonClicked || addOrUpdateAddressForm.controls.houseNo.touched) && addOrUpdateAddressForm.controls.houseNo.errors}">
+        <div *ngIf="(submitButtonClicked || addOrUpdateAddressForm.controls.houseNo.touched) && addOrUpdateAddressForm.controls.houseNo.errors"
+            class="invadivd-feedback">
+            <div *ngIf="addOrUpdateAddressForm.controls.houseNo.errors.required">House No is required
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <label for="city"><b>City</b></label>
+        <input type="text" class="form-control" id="city" placeholder="City" formControlName="city"
+            [ngClass]="{ 'is-invadivd': (submitButtonClicked || addOrUpdateAddressForm.controls.city.touched) && addOrUpdateAddressForm.controls.city.errors}">
+        <div *ngIf="(submitButtonClicked || addOrUpdateAddressForm.controls.city.touched) && addOrUpdateAddressForm.controls.city.errors"
+            class="invadivd-feedback">
+            <div *ngIf="addOrUpdateAddressForm.controls.city.errors.required">City Name is required
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <label for="state"><b>State</b></label>
+        <input type="text" class="form-control" id="state" placeholder="State" formControlName="state"
+            [ngClass]="{ 'is-invadivd': (submitButtonClicked || addOrUpdateAddressForm.controls.state.touched) && addOrUpdateAddressForm.controls.state.errors}">
+        <div *ngIf="(submitButtonClicked || addOrUpdateAddressForm.controls.state.touched) && addOrUpdateAddressForm.controls.state.errors"
+            class="invadivd-feedback">
+            <div *ngIf="addOrUpdateAddressForm.controls.state.errors.required">State Name is required</div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <label for="landmark"><b>Landmark</b></label>
+        <input type="text" class="form-control" id="landmark" placeholder="landmark" formControlName="landmark">
+        <div *ngIf="(submitButtonClicked || addOrUpdateAddressForm.controls.landmark.touched) && addOrUpdateAddressForm.controls.landmark.errors"
+            class="invadivd-feedback">
+            <div *ngIf="addOrUpdateAddressForm.controls.landmark.errors.required">landmark is required</div>
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <button class="pushable col-12 save-changes" [disabled]="addOrUpdateAddressForm.invalid"
+            (click)="updateAddress()">
+            <span>
+                Submit
+            </span>
+        </button>
+    </div>
+</form>
+
+<div *ngIf="mode == 'viewMode'" class="viewContent">
+    <div *ngIf="detailsPresent">
+        <div><b>House No</b></div>
+        <div>{{houseNo}}</div>
+        <br>
+        <div><b>City</b></div>
+        <div>{{city}}</div>
+        <br>
+        <div><b>State</b></div>
+        <div>{{state}}</div>
+        <br>
+        <div><b>LandMark</b></div>
+        <div>{{landmark}}</div>
+    </div>
+    <div *ngIf="!detailsPresent">
+        <div>Details Not Present, Please go to edit mode to add details</div>
+    </div>

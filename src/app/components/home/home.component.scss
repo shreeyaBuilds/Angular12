@@ -1,0 +1,27 @@
+.card-deck {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+
+.food-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 90%;
+    justify-content: space-between;
+}
+
+
+
+.search {
+    border: 1px solid red;
+    margin-left: 41%;
+    padding: 0.5%;
+    width: 20%;
+    text-align: center;
+    margin-top: 0%;
+}

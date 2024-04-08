@@ -1,0 +1,54 @@
+<form *ngIf="showCardDetails" class="row g-3 form-container viewContent" style="width: 8%;" [formGroup]="cardform"
+    #myForm="ngForm" disabled="true">
+    <div>View card details</div>
+    <div class="col-md-12">
+        <b>Name</b>
+        <input type="text" [disabled]="true" class="form-control disableCursor" id="name" formControlName="name"
+            value="name">
+    </div>
+    <br>
+    <div class="col-md-6">
+        <div><b>Credit Card Number</b></div>
+        <input type="string" class="form-control disableCursor" id="creditCardNumber" value="creditCardNumber"
+            formControlName="creditCardNumber">
+
+    </div>
+    <br>
+    <div class="col-md-6">
+        <div><b>CVV/CVC</b></div>
+        <input type="string" class="form-control disableCursor" id="cvv" value="cvv" formControlName="cvv">
+
+    </div>
+    <div class="col-md-6">
+        <div><b>Year</b></div>
+        <input type="number" class="disableCursor" id="year" name="year" value="year" formControlName="year"
+            ng-model="year">
+
+    </div>
+    <div class="col-md-6">
+        <div><b>Month</b></div>
+        <input type="text" class="disableCursor" id="month" name="month" value="month" formControlName="month"
+            ng-model="month">
+
+    </div>
+    <div class="col-6">
+        <button class="pushable col-12 save-changes" (click)="pay()">
+            <span>
+                {{btnText}}
+            </span>
+        </button>
+    </div>
+    <div class="col-6">
+        <button class="pushable col-12 save-changes" (click)="chooseNewCard()">
+            <span>
+                Choose Another Card
+            </span>
+        </button>
+    </div>
+</form>
+
+<div *ngIf="!showCardDetails" class="paymentImage">
+    <span *ngFor="let iconImg of iconImages;let i=index">
+        <a (click)="getCardDetails(i)"> <img class="" src="assets/images/credit-card.png" alt="Payment Card"></a>
+    </span>
+</div>

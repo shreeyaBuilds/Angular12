@@ -1,0 +1,45 @@
+<form class="row g-3 form-container viewContent" [formGroup]="bankForm" #myForm="ngForm">
+    <div class="col-md-12">
+        <label for="name"><b>Name</b></label>
+        <input type="text" class="form-control" id="name" formControlName="name"
+            [ngClass]="{ 'is-invadivd': (submitButtonClicked || bankForm.controls.name.touched) && bankForm.controls.name.errors}">
+        <div *ngIf="(submitButtonClicked || bankForm.controls.name.touched) && bankForm.controls.name.errors"
+            class="invadivd-feedback">
+            <div *ngIf="bankForm.controls.name.errors.required">Name is required
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <label for="accountNumber"><b>Account Number</b></label>
+        <input type="text" class="form-control" id="accountNumber" formControlName="accountNumber"
+            [ngClass]="{ 'is-invadivd': (submitButtonClicked || bankForm.controls.accountNumber.touched) && bankForm.controls.accountNumber.errors}">
+        <div *ngIf="(submitButtonClicked || bankForm.controls.accountNumber.touched) && bankForm.controls.accountNumber.errors"
+            class="invadivd-feedback">
+            <div *ngIf="bankForm.controls.accountNumber.errors.required">Account Number is required
+            </div>
+            <div *ngIf="bankForm.controls.accountNumber.errors.minlength"> Account Number must be of at least 8 digits.
+            </div>
+            <div *ngIf="bankForm.controls.accountNumber.errors.maxlength"> Account Number can have maximum of 12 digits.
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <label for="ifsccode"><b>IFSC Code</b></label>
+        <input type="text" class="form-control" id="ifsccode" formControlName="ifsccode"
+            [ngClass]="{ 'is-invadivd': (submitButtonClicked || bankForm.controls.ifsccode.touched) && bankForm.controls.ifsccode.errors}">
+        <div *ngIf="(submitButtonClicked || bankForm.controls.ifsccode.touched) && bankForm.controls.ifsccode.errors"
+            class="invadivd-feedback">
+            <div *ngIf="bankForm.controls.ifsccode.errors.required">IFSC Code is required</div>
+            <div *ngIf="bankForm.controls.ifsccode.errors.lengthMismatch">IFSC Code must be of 11 digits</div>
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="pushable col-12 save-changes" [disabled]="bankForm.invalid" (click)="pay()">
+            <span>
+                {{btnText}}
+            </span>
+        </button>
+    </div>
+</form>

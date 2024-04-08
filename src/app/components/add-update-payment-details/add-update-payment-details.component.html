@@ -1,0 +1,132 @@
+<form *ngIf="mode =='editMode'" class="row g-3 form-container viewContent" [formGroup]="addorupdatepaymentdetailsform"
+    #myForm="ngForm">
+    <div>Enter your card details</div>
+    <div class="col-md-12">
+        <b>Name</b>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" formControlName="name"
+            [ngClass]="{ 'is-invalid': (submitButtonClicked || addorupdatepaymentdetailsform.controls.name.touched) && addorupdatepaymentdetailsform.controls.name.errors}">
+        <div *ngIf="(submitButtonClicked || addorupdatepaymentdetailsform.controls.name.touched) && addorupdatepaymentdetailsform.controls.name.errors"
+            class="invalid-feedback">
+            <div *ngIf="addorupdatepaymentdetailsform.controls.name.errors.required">Name is required
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-6">
+        <div><b>Credit Card Number</b></div>
+        <input type="string" class="form-control" id="creditCardNumber" placeholder="0000 0000 0000 0000"
+            formControlName="creditCardNumber"
+            [ngClass]="{ 'is-invalid': (submitButtonClicked || addorupdatepaymentdetailsform.controls.creditCardNumber.touched) && addorupdatepaymentdetailsform.controls.creditCardNumber.errors}">
+        <div *ngIf="(submitButtonClicked || addorupdatepaymentdetailsform.controls.creditCardNumber.touched) && addorupdatepaymentdetailsform.controls.creditCardNumber.errors"
+            class="invalid-feedback">
+            <div *ngIf="addorupdatepaymentdetailsform.controls.creditCardNumber.errors.required">credit card number is
+                required
+            </div>
+            <div *ngIf="addorupdatepaymentdetailsform.controls.creditCardNumber.errors.creditcardNumberlengthMismatch">
+                Credit Card Number must be of 12 digits</div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-6">
+        <div><b>CVV/CVC</b></div>
+        <input type="string" class="form-control" id="cvv" placeholder="123" formControlName="cvv">
+        <div *ngIf="(submitButtonClicked || addorupdatepaymentdetailsform.controls.cvv.touched) && addorupdatepaymentdetailsform.controls.cvv.errors"
+            class="invalid-feedback">
+            <div *ngIf="addorupdatepaymentdetailsform.controls.cvv.errors.required">cvv is required</div>
+
+            <div *ngIf="addorupdatepaymentdetailsform.controls.cvv.errors.cvvlengthMismatch">CCV Number must be of exact
+                3 digits</div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div><b>Year</b></div>
+        <select id="year" name="year" formControlName="year" ng-model="year" [ngClass]="{ 'is-invalid': (submitButtonClicked || addorupdatepaymentdetailsform.controls.year.touched) 
+        && addorupdatepaymentdetailsform.controls.year.errors}">
+            <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+        </select>
+        <div *ngIf="(submitButtonClicked || addorupdatepaymentdetailsform.controls.year.touched) && addorupdatepaymentdetailsform.controls.year.errors"
+            class="invalid-feedback">
+            <div *ngIf="addorupdatepaymentdetailsform.controls.year.errors.required">Please select year</div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+        <div><b>Month</b></div>
+        <select id="month" name="month" formControlName="month" ng-model="month" [ngClass]="{ 'is-invalid': (submitButtonClicked || addorupdatepaymentdetailsform.controls.month.touched) 
+        && addorupdatepaymentdetailsform.controls.month.errors}">
+            <option *ngFor="let month of months" value="{{month}}">{{month}}</option>
+        </select>
+        <div *ngIf="(submitButtonClicked || addorupdatepaymentdetailsform.controls.month.touched) && addorupdatepaymentdetailsform.controls.month.errors"
+            class="invalid-feedback">
+            <div *ngIf="addorupdatepaymentdetailsform.controls.month.errors.required">Please select month</div>
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <div class="col-md">
+        <!-- class="pushable col-12 save-changes"  -->
+        <button class="btn btn-success" [disabled]="addorupdatepaymentdetailsform.invalid"
+            (click)="updatenoOfPayments()">
+            <span>
+                Add
+            </span>
+        </button>
+    </div>
+    <div class="col-md">
+        <button class="btn btn-danger resetbtn" (click)="resetPaymentForm()">
+            <span>
+                Reset
+            </span>
+        </button>
+    </div>
+</form>
+
+<div *ngIf="mode == 'viewMode'" class="viewContent">
+    <div *ngIf="!showCardDetails">
+        <span *ngFor="let iconImg of iconImages;let i=index">
+            <a (click)="getCardDetails(i)"> <img class="" src="assets/images/credit-card.png" alt="Payment Card"></a>
+        </span>
+    </div>
+    <div *ngIf="showCardDetails">
+        <form *ngIf="showCardDetails" class="row g-3 form-container viewContent" style="width: 8%;"
+            [formGroup]="cardform" #myForm="ngForm" disabled="true">
+            <div>View card details</div>
+            <div class="col-md-12">
+                <b>Name</b>
+                <input type="text" [disabled]="true" class="form-control disableCursor" id="name" formControlName="name"
+                    value="name">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <div><b>Credit Card Number</b></div>
+                <input type="string" class="form-control disableCursor" id="creditCardNumber" value="creditCardNumber"
+                    formControlName="creditCardNumber">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <div><b>CVV/CVC</b></div>
+                <input type="string" class="form-control disableCursor" id="cvv" value="cvv" formControlName="cvv">
+            </div>
+            <div class="col-md-6">
+                <div><b>Year</b></div>
+                <input type="number" class="disableCursor" id="year" name="year" value="year" formControlName="year"
+                    ng-model="year">
+            </div>
+            <div class="col-md-6">
+                <div><b>Month</b></div>
+                <input type="text" class="disableCursor" id="month" name="month" value="month" formControlName="month"
+                    ng-model="month">
+            </div>
+            <div class="col-6">
+                <button class="pushable col-12 save-changes" (click)="viewNewCard()">
+                    <span>
+                        View Another Card
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,38 @@
+<div class="form-net-container log">
+    <h2 class="heading ">Foody</h2>
+    <form class="row g-3 form-container" [formGroup]="userForm" *ngIf="!showChild">
+        <div class="col-md-12">
+            <input type="username" class="form-control" id="username" placeholder="Username (email-id)"
+                formControlName="username"
+                [ngClass]="{ 'is-invalid': (submitButtonClicked || userForm.controls.username.touched) && userForm.controls.username.errors}">
+            <div *ngIf="(submitButtonClicked || userForm.controls.username.touched) && userForm.controls.username.errors"
+                class="invalid-feedback">
+                <div *ngIf="userForm.controls.username.errors.required">Username is required</div>
+                <div *ngIf="userForm.controls.username.errors.email">Enter a valid username address, e.g.,
+                    john@example.com</div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <input type="password" class="form-control" id="inputpassword" placeholder="Password"
+                formControlName="password"
+                [ngClass]="{ 'is-invalid': (submitButtonClicked || userForm.controls.password.touched) && userForm.controls.password.errors}">
+            <div *ngIf="(submitButtonClicked || userForm.controls.password.touched) && userForm.controls.password.errors"
+                class="invalid-feedback">
+                <div *ngIf="userForm.controls.password.errors.required">password is required</div>
+                <div *ngIf="userForm.controls.password.errors.minlength"> password must be at least 6 characters.
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="pushable col-12 save-changes" [disabled]="userForm.invalid" (click)="login()">
+                <span class="front">
+                    Login
+                </span>
+            </button>
+        </div>
+        <div class="bkg"><a class="forgotPassword" href="/passwordreset">Forgot Password?</a>
+            <a href="/">Create Account/Register</a>
+        </div>
+    </form>
+</div>

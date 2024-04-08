@@ -1,0 +1,182 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+// .heading {
+//     color: white;
+// }
+
+$button-color: teal;
+
+// .invalid-feedback {
+//     color: chartreuse;
+// }
+
+// .form-control.is-invalid {
+//     border-color: chartreuse;
+// }
+
+.form-net-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 450px;
+    height: 100%;
+}
+
+.pushable {
+    background: lighten($color: $button-color, $amount: 0);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    height: 40px;
+    cursor: pointer;
+}
+
+// .front {
+//     /* display: block; */
+//     padding: 10px 20px;
+//     //border-radius: 12px;
+//     font-size: 1.25rem;
+//     background: green;
+//     color: white;
+//     height: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     /* box-sizing: border-box; */
+//     //transform: translate(2px, 5px);
+// }
+
+
+.pushable:active .front {
+    transform: translateY(0px);
+}
+
+a {
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.background-image {
+    background-image: url('assets/images/stars.jpg');
+    filter: blur(1px);
+    height: 100%;
+}
+
+.save-changes {
+    padding: 10px 20px;
+    //border-radius: 12px;
+    font-size: 1.25rem;
+    background: green;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .save-changes[disabled] {
+    padding: 10px 20px;
+    //border-radius: 12px;
+    font-size: 1.25rem;
+    background: lightgreen;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   cursor: not-allowed! important;
+  }
+
+  a{
+    color: green;
+}
+
+// .not-allowed {
+//     pointer-events: auto! important;
+//     cursor: not-allowed! important;
+// }
+
+// button:disabled {
+//     cursor: not-allowed;
+//     pointer-events: all !important;
+//   }
+
+//   button:disabled,
+// button[disabled]{
+//   border: 1px solid #999999;
+//   background-color: #cccccc;
+//   color: #666666;
+//   pointer-events: auto! important;
+//   cursor: not-allowed! important;
+// }
+
+
+
+//     color: blue
+//   }
+//   button:disabled,
+//   button[disabled]{
+//     border: 1px solid #999999;
+//     background-color: #cccccc;
+//     color: #666666;
+//     cursor: not-allowed! important;
+//   }
+
+
+//   .front {
+//     /* display: block; */
+//     padding: 10px 20px;
+//     //border-radius: 12px;
+//     font-size: 1.25rem;
+//     background: green;
+//     color: white;
+//     height: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     /* box-sizing: border-box; */
+//     //transform: translate(2px, 5px);
+// }
+
+
+.pushable:active .front {
+    transform: translateY(0px);
+}
+
+.forgotPassword{
+    float:right;   
+}
+
+.flex-justify-between {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.bigger {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.viewContent {margin-top: .12%;
+    margin-left: .5%;
+    background: black;
+    color: lightgrey;
+}
+
+    .backimg{
+        background-image: url('/assets/images/food_img.jpg');
+        width: 100%;
+        height: 100%;
+    }

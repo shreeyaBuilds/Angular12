@@ -1,0 +1,37 @@
+
+
+.flex{
+    //height: 100%;
+    //display: flex;
+    // align-items: center;
+    // justify-content: center;
+    overflow-y:scroll;
+}
+
+#cart {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+// <div id="content">
+//     <img src="images/ribbon.png" class="ribbon"/>
+//     <div>some text...</div>
+// </div>
+
+.icons{
+   // border: 1px solid red;
+    display: flex;
+    margin-left: 593%;
+}
+
+.reg {
+    background: black;
+    color: white;
+    width: 44%;
+    margin-left: 29%;
+}
+

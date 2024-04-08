@@ -1,0 +1,54 @@
+<div class=" sidenav" *ngIf="this.cartItemsExists">
+  <h4 style="text-align :center;">Current Cart</h4>
+  <table class="table contents" style="width:100%">
+    <tr>
+
+      <th style="width: 1%">Item</th>
+      <th>Base Price</th>
+      <th>QTY</th>
+      <th>Item Price</th>
+      <th></th>
+    </tr>
+
+    <tr *ngFor="let cartItem of cartItems">
+      <td style="width: 1%"> <img [src]="cartItem.itemImage" style="margin-left: -4%;" alt="Food image"></td>
+      <td>{{cartItem.basePrice}}</td>
+      <td> {{cartItem.qty}}</td>
+      <td>{{cartItem.itemPrice}}</td>
+
+      <td><button type="button" class="btn btn-danger" (click)="removeFromCart(cartItem)">Remove</button></td>
+    </tr>
+  </table>
+
+</div>
+<div class="rightdiv" *ngIf="this.cartItemsExists">
+  <h4>Review Order</h4>
+  <p>
+    Subtotal : ${{subTotal}}
+  </p>
+
+  <p>
+    Tax : $10
+  </p>
+  <p>
+    Shipping : $5
+  </p>
+  <p>
+    Order Total : $ {{orderTotal}}
+  </p>
+
+  <button type="button" (click)="placeOrder()" class="btn btn-success">Place Order</button>
+  <div class="btsa"><button type="button" (click)="navigateToEditAddressMode()" routerLink='/settings/address'
+      class="btn btn-warning">Add Address</button>
+    <button type="button" (click)="navigateToEditPaymentMode()" routerLink='/settings/payment'
+      class="btn btn-warning addPaymentDetails">Add Payment Details</button>
+  </div>
+  <button type="button" routerLink='/home' class="btn btn-success btsa1">Add More Delicacies</button>
+</div>
+
+<div *ngIf="!this.cartItemsExists" class="NoELementsPresentInCart">
+  Oops, No delicacies are there in your cart.
+  Please checkout our home page for all the delicacies
+  <br>
+  <a class="GoBackToHome" (click)="resetCartItems()">Go Back To Home</a>
+</div>

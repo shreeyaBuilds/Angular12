@@ -1,0 +1,58 @@
+<input type="text" class="search" [(ngModel)]="filterByRestaurantNameOrDishName" placeholder="Search Food / Restaurant">
+
+<div class="card-deck row">
+
+    <div class="card border-success mb-3" *ngFor="let food of foodDetails | search :filterByRestaurantNameOrDishName"
+        style="max-width: 18rem;">
+
+        <div class="card-header bg-transparent border-success">{{food.restaurant}}</div>
+        <div class="card-body text-success">
+            <img class="card-img-top" [src]="food.imageUrl" alt="Card image">
+            <p class="card-text">{{food.dishName}}</p>
+            <p class="card-text">{{food.description}}</p>
+            <div class="flex-justify-between">
+                <p class="card-text">
+                    {{food.rating}}
+                </p>
+                <p class="card-text">
+                    {{food.cost}}
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card-footer bg-transparent border-success">
+            <div class="flex-justify-between">
+
+
+                <button type="button" class="btn btn-success" (click)="open(cardtemplate,food,'addToCart')">Add to
+                    Cart</button>
+                <button type="button" class="btn btn-primary" (click)="open(cardtemplate,food,'placeOrder')">Place
+                    Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #cardtemplate let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{food.restaurant}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <img [src]="food.imageUrl" alt="Card image">
+        <p>{{food.dishName}}</p>
+        <p>{{food.description}}</p>
+        <p>{{food.cost}}</p>
+
+    </div>
+    <div class="modal-footer">
+        <button *ngIf="addToCartTemplateType" type="button" class="btn btn-success"
+            (click)="confirmAddToCart(food)">Confirm Add TO Cart</button>
+        <button *ngIf="!addToCartTemplateType" type="button" class="btn btn-primary" (click)="placeOrder(food)">Place
+            Order</button>
+        <button type="button" class="btn btn-danger" (click)="c('Cancel click')">Cancel</button>
+    </div>
+</ng-template>

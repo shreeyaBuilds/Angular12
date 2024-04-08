@@ -1,0 +1,42 @@
+<div class="sidenav">
+  <div class="d-flex">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+      <li style="margin-top: -67%;">
+        <h1>Pay With</h1>
+      </li>
+      <li ngbNavItem="bank">
+        <a class="navlinksContent" routerLink='/placeOrder/bank' ngbNavLink>Bank</a>
+      </li>
+      <li ngbNavItem="card">
+        <a class="address" routerLink='/placeOrder/card' ngbNavLink>Card</a>
+      </li>
+      <li ngbNavItem="qrcode">
+        <a class="navlinksContent" routerLink='/placeOrder/qrcode' ngbNavLink>QR Code</a>
+
+      </li>
+      <li ngbNavItem="homePage">
+        <a class="GoBackToHome" routerLink='/home' ngbNavLink>Go To Home Page</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <li [ngbNavItem]="'bank'">
+        <a class="commonToNav" routerLink='/placeOrder/bank' ngbNavLink>Bank</a>
+      </li>
+      <li [ngbNavItem]="'card'">
+        <a class='commonToAddress' routerLink='/placeOrder/card' ngbNavLink>Card</a>
+      </li>
+      <li [ngbNavItem]="'qrcode'">
+        <a class="commonToNav" routerLink='/placeOrder/qrcode' ngbNavLink>QR Code</a>
+
+      </li>
+    </ul>
+
+    <div>
+      <router-outlet [ngbNavOutlet]="nav" class="mt-2"> </router-outlet>
+    </div>
+  </div>
+</div>
